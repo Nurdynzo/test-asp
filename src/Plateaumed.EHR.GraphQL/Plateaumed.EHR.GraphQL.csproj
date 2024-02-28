@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props"></Import>
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>Plateaumed.EHR</RootNamespace>
+    <Configurations>Test;Stage;Debug;Release</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <IntermediateOutputPath>obj\Test</IntermediateOutputPath>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Test</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+	  <NoWarn>CS1591</NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <IntermediateOutputPath>obj\Stage</IntermediateOutputPath>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Stage</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="3.1.3" />
+    <PackageReference Include="GraphQL.NewtonsoftJson" Version="3.1.3" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="4.3.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore.NewtonsoftJson" Version="4.3.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="4.3.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plateaumed.EHR.Application.Shared\Plateaumed.EHR.Application.Shared.csproj" />
+    <ProjectReference Include="..\Plateaumed.EHR.Core\Plateaumed.EHR.Core.csproj" />
+  </ItemGroup>
+</Project>

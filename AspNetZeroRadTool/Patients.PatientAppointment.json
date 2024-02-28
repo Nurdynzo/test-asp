@@ -1,0 +1,360 @@
+{
+  "IsRegenerate": false,
+  "MenuPosition": null,
+  "RelativeNamespace": "Patients",
+  "EntityName": "PatientAppointment",
+  "EntityNamePlural": "PatientAppointments",
+  "TableName": "PatientAppointments",
+  "PrimaryKeyType": "long",
+  "BaseClass": "FullAuditedEntity",
+  "EntityHistory": true,
+  "AutoMigration": true,
+  "UpdateDatabase": true,
+  "CreateUserInterface": false,
+  "CreateViewOnly": false,
+  "CreateExcelExport": false,
+  "IsNonModalCRUDPage": false,
+  "IsMasterDetailPage": false,
+  "PagePermission": {
+    "Host": false,
+    "Tenant": true
+  },
+  "Properties": [
+    {
+      "Name": "Title",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Duration",
+      "Type": "int",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "StartTime",
+      "Type": "DateTime",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "IsRepeat",
+      "Type": "bool",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Notes",
+      "Type": "string",
+      "MaxLength": 1024,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "RepeatType",
+      "Type": "AppointmentRepeatType",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Status",
+      "Type": "AppointmentStatusType",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Type",
+      "Type": "AppointmentType",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    }
+  ],
+  "NavigationProperties": [
+    {
+      "Namespace": "Plateaumed.EHR.Patients",
+      "ForeignEntityName": "Patient",
+      "IdType": "long",
+      "IsNullable": false,
+      "PropertyName": "PatientId",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "PatientCode"
+        ]
+      }
+    },
+    {
+      "Namespace": "Plateaumed.EHR.Patients",
+      "ForeignEntityName": "PatientReferral",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "PatientReferralId",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "ReferringHospital"
+        ]
+      }
+    },
+    {
+      "Namespace": "Plateaumed.EHR.Staff",
+      "ForeignEntityName": "StaffMember",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "AttendingPhysician",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "StaffCode"
+        ]
+      }
+    },
+    {
+      "Namespace": "Abp.Organizations",
+      "ForeignEntityName": "OrganizationUnit",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "ReferringClinic",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "DisplayName"
+        ]
+      }
+    },
+    {
+      "Namespace": "Abp.Organizations",
+      "ForeignEntityName": "OrganizationUnit",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "AttendingClinic",
+      "DuplicationNumber": 2,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "DisplayName"
+        ]
+      }
+    }
+  ],
+  "NavigationPropertyOneToManyTables": [],
+  "EnumDefinitions": [
+    {
+      "Name": "AppointmentRepeatType",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "Daily",
+          "Value": 0
+        },
+        {
+          "Name": "Weekly",
+          "Value": 1
+        },
+        {
+          "Name": "Weekends",
+          "Value": 2
+        },
+        {
+          "Name": "Weekdays",
+          "Value": 3
+        },
+        {
+          "Name": "Monthly",
+          "Value": 4
+        },
+        {
+          "Name": "Annually",
+          "Value": 5
+        },
+        {
+          "Name": "Custom",
+          "Value": 6
+        }
+      ]
+    },
+    {
+      "Name": "AppointmentStatusType",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "Pending",
+          "Value": 0
+        },
+        {
+          "Name": "Executed",
+          "Value": 1
+        },
+        {
+          "Name": "Missed",
+          "Value": 2
+        },
+        {
+          "Name": "Rescheduled",
+          "Value": 3
+        }
+      ]
+    },
+    {
+      "Name": "AppointmentType",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "Walk_In",
+          "Value": 0
+        },
+        {
+          "Name": "Referral",
+          "Value": 1
+        },
+        {
+          "Name": "Consultation",
+          "Value": 2
+        },
+        {
+          "Name": "Follow_Up",
+          "Value": 3
+        },
+        {
+          "Name": "Medical_Exam",
+          "Value": 4
+        }
+      ]
+    }
+  ],
+  "DbContext": null
+}

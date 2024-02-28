@@ -1,0 +1,555 @@
+{
+  "IsRegenerate": false,
+  "MenuPosition": null,
+  "RelativeNamespace": "Patients",
+  "EntityName": "Patient",
+  "EntityNamePlural": "Patients",
+  "TableName": "Patients",
+  "PrimaryKeyType": "long",
+  "BaseClass": "FullAuditedEntity",
+  "EntityHistory": true,
+  "AutoMigration": true,
+  "UpdateDatabase": true,
+  "CreateUserInterface": false,
+  "CreateViewOnly": false,
+  "CreateExcelExport": false,
+  "IsNonModalCRUDPage": false,
+  "IsMasterDetailPage": false,
+  "PagePermission": {
+    "Host": false,
+    "Tenant": true
+  },
+  "Properties": [
+    {
+      "Name": "PatientCode",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 1,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": true,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": true,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Address",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "District",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Ethnicity",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "Religion",
+      "Type": "Religion",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "MaritalStatus",
+      "Type": "MaritalStatus",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "BloodGroup",
+      "Type": "BloodGroup",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "BloodGenotype",
+      "Type": "BloodGenotype",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": true,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "LocationOfWork",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": false,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "NuclearFamilySize",
+      "Type": "int",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": true,
+        "MinimumValue": 0.0,
+        "MaximumValue": 99.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": false,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "NumberOfSiblings",
+      "Type": "int",
+      "MaxLength": 120,
+      "MinLength": 1,
+      "Range": {
+        "IsRangeSet": true,
+        "MinimumValue": 0.0,
+        "MaximumValue": 99.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": false,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "PositionInFamily",
+      "Type": "string",
+      "MaxLength": 120,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": false,
+        "MinimumValue": 0.0,
+        "MaximumValue": 0.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": false,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    },
+    {
+      "Name": "NumberOfChildren",
+      "Type": "int",
+      "MaxLength": 0,
+      "MinLength": 0,
+      "Range": {
+        "IsRangeSet": true,
+        "MinimumValue": 0.0,
+        "MaximumValue": 99.0
+      },
+      "Required": false,
+      "Nullable": false,
+      "Regex": "",
+      "UserInterface": {
+        "AdvancedFilter": false,
+        "List": false,
+        "CreateOrUpdate": true
+      },
+      "ViewType": null,
+      "AdditionalData": {}
+    }
+  ],
+  "NavigationProperties": [
+    {
+      "Namespace": "Plateaumed.EHR.Misc",
+      "ForeignEntityName": "Country",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "CountryId",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "Name"
+        ]
+      }
+    },
+    {
+      "Namespace": "Plateaumed.EHR.Patients",
+      "ForeignEntityName": "PatientOccupation",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "PatientOccupationId",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "Name"
+        ]
+      }
+    },
+    {
+      "Namespace": "Plateaumed.EHR.Patients",
+      "ForeignEntityName": "PatientOccupationCategory",
+      "IdType": "long",
+      "IsNullable": true,
+      "PropertyName": "PatientOccupationCategoryId",
+      "DuplicationNumber": 0,
+      "RelationType": "single",
+      "ViewType": "LookupTable",
+      "DisplayPropertyNameInfos": {
+        "MergeFormat": "{0}",
+        "DisplayPropertyNames": [
+          "Name"
+        ]
+      }
+    }
+  ],
+  "NavigationPropertyOneToManyTables": [],
+  "EnumDefinitions": [
+    {
+      "Name": "Religion",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "Christianity",
+          "Value": 0
+        },
+        {
+          "Name": "Islam",
+          "Value": 1
+        },
+        {
+          "Name": "African_Traditional_Religion",
+          "Value": 2
+        },
+        {
+          "Name": "Agnosticism",
+          "Value": 3
+        },
+        {
+          "Name": "Atheism",
+          "Value": 4
+        },
+        {
+          "Name": "Babism",
+          "Value": 5
+        },
+        {
+          "Name": "Bahai_Faith",
+          "Value": 6
+        },
+        {
+          "Name": "Buddhism",
+          "Value": 7
+        },
+        {
+          "Name": "Caodaism",
+          "Value": 8
+        },
+        {
+          "Name": "Cheondogyo",
+          "Value": 9
+        },
+        {
+          "Name": "Confucianism",
+          "Value": 10
+        },
+        {
+          "Name": "Daejongism",
+          "Value": 11
+        },
+        {
+          "Name": "Druze",
+          "Value": 12
+        },
+        {
+          "Name": "Hinduism",
+          "Value": 13
+        },
+        {
+          "Name": "Jainism",
+          "Value": 14
+        },
+        {
+          "Name": "Judaism",
+          "Value": 15
+        },
+        {
+          "Name": "Mandaeism",
+          "Value": 16
+        },
+        {
+          "Name": "Rastafarianism",
+          "Value": 17
+        },
+        {
+          "Name": "Ryukuan_Religion",
+          "Value": 18
+        },
+        {
+          "Name": "Shamanism",
+          "Value": 19
+        },
+        {
+          "Name": "Shintoism",
+          "Value": 20
+        },
+        {
+          "Name": "Shugendo",
+          "Value": 21
+        },
+        {
+          "Name": "Sikhism",
+          "Value": 22
+        },
+        {
+          "Name": "Taoism",
+          "Value": 23
+        },
+        {
+          "Name": "Yarsanism",
+          "Value": 24
+        },
+        {
+          "Name": "Yazdanism",
+          "Value": 25
+        },
+        {
+          "Name": "Zoroastrianism",
+          "Value": 26
+        }
+      ]
+    },
+    {
+      "Name": "MaritalStatus",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "Single",
+          "Value": 0
+        },
+        {
+          "Name": "Married",
+          "Value": 1
+        },
+        {
+          "Name": "Divorced",
+          "Value": 2
+        },
+        {
+          "Name": "Widowed",
+          "Value": 3
+        },
+        {
+          "Name": "Separated",
+          "Value": 4
+        }
+      ]
+    },
+    {
+      "Name": "BloodGroup",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "A_Positive",
+          "Value": 0
+        },
+        {
+          "Name": "A_Negative",
+          "Value": 1
+        },
+        {
+          "Name": "B_Positive",
+          "Value": 2
+        },
+        {
+          "Name": "B_Negative",
+          "Value": 3
+        },
+        {
+          "Name": "O_Positive",
+          "Value": 4
+        },
+        {
+          "Name": "O_Negative",
+          "Value": 5
+        },
+        {
+          "Name": "AB_Positive",
+          "Value": 6
+        },
+        {
+          "Name": "AB_Negative",
+          "Value": 7
+        }
+      ]
+    },
+    {
+      "Name": "BloodGenotype",
+      "Namespace": "Plateaumed.EHR.Patients",
+      "EnumProperties": [
+        {
+          "Name": "AA",
+          "Value": 0
+        },
+        {
+          "Name": "AS",
+          "Value": 1
+        },
+        {
+          "Name": "AC",
+          "Value": 2
+        },
+        {
+          "Name": "SS",
+          "Value": 3
+        },
+        {
+          "Name": "SC",
+          "Value": 4
+        }
+      ]
+    }
+  ],
+  "DbContext": null
+}

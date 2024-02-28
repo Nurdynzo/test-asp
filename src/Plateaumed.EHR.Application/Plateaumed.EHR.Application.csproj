@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props"></Import>
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>Plateaumed.EHR.Application</AssemblyName>
+    <PackageId>Plateaumed.EHR.Application</PackageId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Plateaumed.EHR</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Test;Stage;Debug;Release</Configurations>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <IntermediateOutputPath>obj\Test</IntermediateOutputPath>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Test</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+	  <NoWarn>CS1591</NoWarn>
+    <LangVersion>Default</LangVersion>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <IntermediateOutputPath>obj\Stage</IntermediateOutputPath>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Stage</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn></NoWarn>
+    <LangVersion>Default</LangVersion>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.EntityFrameworkCore.EFPlus" Version="8.0.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.17.0" />
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="NPOI" Version="2.5.6" />
+    <PackageReference Include="Stripe.net" Version="41.21.0" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plateaumed.EHR.Application.Shared\Plateaumed.EHR.Application.Shared.csproj" />
+    <ProjectReference Include="..\Plateaumed.EHR.Core\Plateaumed.EHR.Core.csproj" />
+    <ProjectReference Include="..\Plateaumed.EHR.EntityFrameworkCore\Plateaumed.EHR.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Misc\Country\" />
+  </ItemGroup>
+</Project>
+

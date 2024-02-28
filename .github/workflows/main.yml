@@ -15,4 +15,4 @@ jobs:
 
       - name: Build, tag, and push image to Amazon ECR
         run: |
-          docker build -t asp
+          docker build -t asp .

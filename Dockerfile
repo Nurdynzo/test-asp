@@ -16,12 +16,12 @@ WORKDIR /src
 # COPY ["src/Plateaumed.EHR.EntityFrameworkCore/Plateaumed.EHR.EntityFrameworkCore.csproj", "src/Plateaumed.EHR.EntityFrameworkCore/"]
 # RUN dotnet restore "./src/Plateaumed.EHR.Web.Host/./Plateaumed.EHR.Web.Host.csproj"
 COPY . .
-# WORKDIR "/src/src/Plateaumed.EHR.Web.Host"
 # RUN dotnet build "./Plateaumed.EHR.Web.Host.csproj" -c $BUILD_CONFIGURATION -o /app/build
 RUN dotnet build "./Plateaumed.EHR.Web.sln" -c $BUILD_CONFIGURATION
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
+WORKDIR "/src/src/Plateaumed.EHR.Web.Host"
 RUN dotnet publish "./Plateaumed.EHR.Web.Host.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 
 FROM base AS final

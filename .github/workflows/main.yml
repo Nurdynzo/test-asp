@@ -30,5 +30,6 @@ jobs:
         id: build-image
 
         run: |
-          docker build -t test .
+          echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+          zip -r cypress-results-${{ env.DATE }}.zip build
 
